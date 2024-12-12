@@ -110,6 +110,8 @@ services:
         condition: service_healthy
       createbuckets:
         condition: service_started
+    environment:
+      - AUTUMN_MONGO_URI=mongodb://database
     volumes:
       - ./Revolt.toml:/Revolt.toml
     restart: always
