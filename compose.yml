@@ -98,13 +98,13 @@ services:
 
   # Web App (revite)
   web:
-    image: ghcr.io/revoltchat/client:master
+    image: index.docker.io/platinumscripts/revite-client:latest
     restart: always
     env_file: .env.web
 
   # File server (autumn)
   autumn:
-    image: ghcr.io/revoltchat/autumn:20241128-3
+    image: index.docker.io/platinumscripts/revolt-autumn:latest
     depends_on:
       database:
         condition: service_healthy
